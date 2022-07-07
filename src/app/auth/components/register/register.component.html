@@ -1,1 +1,41 @@
-Register Page
+<div class='auth-page'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-6 offset-md-3 col-xs-12'>
+        <h1 class='text-xs-center'>Sign Up</h1>
+        <p class='text-xs-center'>
+          <a [routerLink]="['/login']">Have an account</a>
+        </p>
+        <i style='color: red'>Backend errors</i>
+        <form [formGroup]='form' (ngSubmit)='onSubmit()'>
+          <fieldset>
+            <fieldset class='form-group'>
+              <input class='form-control form-control-lg'
+                     type='text'
+                     placeholder='username'
+                     formControlName='username'
+              >
+            </fieldset>
+            <fieldset class='form-group'>
+              <input class='form-control form-control-lg'
+                     type='text'
+                     placeholder='email'
+                     formControlName='email'
+              >
+            </fieldset>
+            <fieldset class='form-group'>
+              <input class='form-control form-control-lg'
+                     type='password'
+                     placeholder='password'
+                     formControlName='password'
+              >
+            </fieldset>
+            <button class='btn btn-lg btn-primary pull-xs-right'
+                    type='submit'>Sign up
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
